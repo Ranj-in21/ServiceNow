@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="ServiceNowSuite" verbose ="5">
+	<parameter name = "URL" value = "https://dev110851.service-now.com"/>
+	<parameter name = "UserName" value = "admin"/>
+	<parameter name = "PassWord" value = "Infinity@7"/>
+  <test thread-count="2" parallel="classes" name="TestChrome">
+  	<parameter name = "browserName" value = "Chrome"/>
+    <classes>
+      <class name="serviceNowTestNG.SnKnowledgeParameterization"/>
+      <class name="serviceNowTestNG.SnMobileParameteriztion"/>
+      <class name="serviceNowTestNG.SnNewCallerParameterization"/>
+      <class name="serviceNowTestNG.SnNewProposalParameterization"/>
+    </classes>
+  </test> <!-- Test -->
+  <!-- <test thread-count="5" parallel="classes" name="TestEdge">
+  	<parameter name = "browserName" value = "Edge"/>
+    <classes>
+      <class name="serviceNowTestNG.SnKnowledgeParameterization"/>
+      <class name="serviceNowTestNG.SnMobileParameteriztion"/>
+      <class name="serviceNowTestNG.SnNewCallerParameterization"/>
+      <class name="serviceNowTestNG.SnNewProposalParameterization"/>
+    </classes>
+  </test> Test -->
+</suite> <!-- ServiceNowSuite -->
